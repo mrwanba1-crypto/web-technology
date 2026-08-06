@@ -1,71 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+<title>Marwan Ba Labid</title>
+<meta charset="UTF-8">
+<meta name="description" content="Marwan Ba Labid Resume">
+<meta name="keywords" content="Marwan, Ba Labid, Resume, Computer Science">
+<meta name="author" content="Marwan Ba Labid">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  :root{
+    --bg:#12141a;
+    --panel:#191c24;
+    --line:#2a2e38;
+    --text:#e9e8e3;
+    --muted:#8b90a0;
+    --mint:#7ef2c0;
+    --amber:#f2b84b;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'IBM Plex Mono', 'Courier New', monospace;
+    padding:48px 20px 80px;
+    display:flex;
+    justify-content:center;
+  }
+  main{width:100%;max-width:680px;}
 
-    <!-- Page Title -->
-    <title>Marwan Ba Labid</title>
+  /* ---- terminal window chrome, the signature element ---- */
+  .term{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:10px;
+    overflow:hidden;
+    margin-bottom:28px;
+  }
+  .term-bar{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    padding:10px 14px;
+    background:#1e2129;
+    border-bottom:1px solid var(--line);
+  }
+  .term-bar span{width:10px;height:10px;border-radius:50%;display:inline-block;}
+  .term-path{
+    margin-left:8px;
+    font-size:12px;
+    color:var(--muted);
+    letter-spacing:.02em;
+  }
+  .term-body{padding:22px 24px;}
 
-    <!-- Character Encoding -->
-    <meta charset="UTF-8">
+  .prompt{color:var(--mint);}
+  .prompt::before{content:"$ ";color:var(--muted);}
 
-    <!-- Page Description -->
-    <meta name="description" content="Marwan Ba Labid Resume">
+  h1{
+    font-family:'Space Grotesk','Segoe UI',sans-serif;
+    font-size:34px;
+    margin:0 0 2px;
+    letter-spacing:-0.01em;
+  }
+  .role{
+    color:var(--mint);
+    font-size:14px;
+    margin:0 0 18px;
+  }
+  .about-line{
+    color:var(--text);
+    font-size:14.5px;
+    line-height:1.75;
+    margin:0;
+  }
+  .cursor{
+    display:inline-block;
+    width:8px;height:16px;
+    background:var(--mint);
+    vertical-align:-3px;
+    animation:blink 1s steps(1) infinite;
+  }
+  @keyframes blink{50%{opacity:0;}}
 
-    <!-- Keywords -->
-    <meta name="keywords" content="Marwan, Ba Labid, Resume, Computer Science">
+  .id-row{
+    display:flex;
+    align-items:center;
+    gap:22px;
+    margin-bottom:8px;
+  }
 
-    <!-- Author -->
-    <meta name="author" content="Marwan Ba Labid">
+  section{margin:36px 0;}
+  .sec-head{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:16px;
+  }
+  .sec-head h2{
+    font-family:'Space Grotesk','Segoe UI',sans-serif;
+    font-size:16px;
+    text-transform:uppercase;
+    letter-spacing:.12em;
+    margin:0;
+    color:var(--text);
+  }
+  .sec-head svg{flex-shrink:0;}
+  .rule{
+    flex:1;
+    height:1px;
+    background:var(--line);
+  }
 
-    <!-- Responsive Design -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  ul.plain{list-style:none;margin:0;padding:0;}
+  .tag-row{display:flex;flex-wrap:wrap;gap:10px;}
+  .tag{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    border:1px solid var(--line);
+    background:var(--panel);
+    padding:8px 14px;
+    border-radius:20px;
+    font-size:13px;
+    color:var(--text);
+  }
+  .tag svg{flex-shrink:0;}
 
+  .skill{margin-bottom:14px;}
+  .skill-label{
+    display:flex;
+    justify-content:space-between;
+    font-size:12.5px;
+    color:var(--muted);
+    margin-bottom:6px;
+  }
+  .skill-label span:last-child{color:var(--text);}
+
+  .list-item{
+    display:flex;
+    gap:12px;
+    padding:12px 0;
+    border-bottom:1px solid var(--line);
+    align-items:flex-start;
+  }
+  .list-item:last-child{border-bottom:none;}
+  .list-item svg{flex-shrink:0;margin-top:2px;}
+  .list-item-text .t{font-size:14.5px;color:var(--text);}
+  .list-item-text .d{font-size:12.5px;color:var(--muted);margin-top:2px;}
+
+  footer{
+    margin-top:44px;
+    text-align:center;
+    font-size:12px;
+    color:var(--muted);
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .cursor{animation:none;opacity:1;}
+  }
+</style>
 </head>
-
 <body>
+<main>
 
-    <!-- Main Heading -->
-    <h1>Marwan Ba Labid</h1>
-
-    <!-- About Me -->
-    <p>
-        My name is Marwan Ba Labid. I am a Computer Science student.
-        I am interested in programming and web development.
-        I enjoy learning new technologies and improving my programming skills.
-    </p>
-
-    <!-- Education -->
-    <h2>Education</h2>
-    <p>Computer Science Student</p>
-
-    <!-- Languages -->
-    <h2>Languages</h2>
-    <ul>
-        <li>Arabic</li>
-        <li>English</li>
-    </ul>
-
-    <!-- Programming Languages -->
-    <h2>Programming Languages</h2>
-    <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-    </ul>
-
-    <!-- Projects -->
-    <h2>Projects</h2>
-    <p>Personal Resume Website</p>
-
-    <!-- Hobbies -->
-    <h2>Hobbies</h2>
-    <ul>
-        <li>Programming</li>
-        <li>Web Development</li>
-        <li>Learning New Technologies</li>
-    </ul>
-
-</body>
-
-</html>
+  <!-- ===== Header: avatar drawn in SVG + terminal identity block ===== -->
+  <div class="id-row">
+    <svg width="88" height="88" viewBox="0 0 88 88" aria-label="Profile monogram">
+      <defs>
+        <linearGradient id="avatarGrad" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#7ef2c0"/>
+          <stop offset="100%" stop-color="#3fb98a"/>
+        </linearGradient>
+      </defs>
+      <circle cx="44" cy="44" r="42"
