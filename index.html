@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>guessing number</title>
+</head>
+
+<body>
+
+    <h1>guess the number</h1>
+
+    <script>
+        // Alert
+        alert("It's between 0 and 10");
+
+        // Confirm
+        let answer = confirm("Press a button!");
+
+        if (answer) {
+            alert("Your number is");
+        } else {
+            alert("You cancelled.");
+        }
+
+        // Prompt
+        let number = prompt("Please enter a number between 1-10");
+
+        if (number >= 6 && number <= 8) {
+            alert("Horaaay!!\nYou guessed it. " + number);
+        } else {
+            alert("fail ... try again!!");
+        }
+    </script>
+
+</body>
+</html>
